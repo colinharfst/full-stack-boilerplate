@@ -22,7 +22,7 @@ export default function Routes() {
               <Link to="/judge">Judge</Link>
             </li>
             <li>
-              <Link to="/chess">chess</Link>
+              <Link to="/chess">Chess</Link>
             </li>
             <li>
               <Link to="/math">Math</Link>
@@ -31,9 +31,6 @@ export default function Routes() {
         </nav>
 
         <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
           <Route path="/resume">
             <Resume />
           </Route>
@@ -45,6 +42,9 @@ export default function Routes() {
           </Route>
           <Route path="/math">
             <Math />
+          </Route>
+          <Route path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
