@@ -1,5 +1,5 @@
 import * as React from "react";
 
-export default function Chess() {
-  return <div>Here's some chess text</div>;
+export default function ChessComp() {
+  return <h2>Here's some chess text</h2>;
 }

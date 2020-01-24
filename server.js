@@ -13,6 +13,12 @@ app.listen(port, () => {
   console.log(`App is listening on port ${port}`);
 });
 
+app.use(express.static(path.resolve(__dirname, "dist")));
+
+app.get("*", (_req, res) => {
+  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
+});
+
 app.use(
   webpackMidware(compiler, {
     noInfo: true,
@@ -21,9 +27,3 @@ app.use(
   })
 );
 app.use(webpackHotMidware(compiler));
-
-app.use(express.static(path.resolve(__dirname, "dist")));
-
-app.get("*", (_req, res) => {
-  res.sendFile(path.resolve(__dirname, "dist", "index.html"));
-});

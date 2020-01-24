@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./home";
 import Resume from "./resume";
 import Judge from "./judge";
-import Chess from "./chess";
+import ChessComp from "./chess";
 import Math from "./math";
 
 export default function Routes() {
@@ -38,7 +38,7 @@ export default function Routes() {
             <Judge />
           </Route>
           <Route path="/chess">
-            <Chess />
+            <ChessComp />
           </Route>
           <Route path="/math">
             <Math />
